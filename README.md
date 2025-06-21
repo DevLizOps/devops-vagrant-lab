@@ -251,8 +251,8 @@ Esto te permitirá verificar herramientas instaladas, revisar logs o seguir haci
 Una vez hayas terminado de probar el proyecto, puedes detener y eliminar la máquina virtual:
 
 ```bash
-vagrant halt    # Gracefully shuts down the VM
-vagrant destroy # Destroys the VM and deletes all resources
+vagrant halt    # Apaga la VM de forma segura
+vagrant destroy # Elimina la VM y borra todos los recursos asociados
 ```
 
 Esto ayuda a liberar espacio en disco y mantener tu sistema limpio.
