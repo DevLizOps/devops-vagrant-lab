@@ -3,7 +3,7 @@
 - [Haz clic aquí para la versión en Español](#versión-en-español)
 
 # DevOps Lab with Vagrant & VirtualBox  
-_Created as part of the [90 Días de DevOps con Roxs](https://github.com/roxsross/90diasdevops) challenge_
+_Created as part of the [90 Días de DevOps con Roxs](https://github.com/roxsross/90daysdevopsbyroxs) challenge_
 
 ## 📦 About this project
 
@@ -115,7 +115,7 @@ Feel free to use, modify and share it as long as you keep the original license n
 - [Click here for the English Version](#english-version)
 
 # Laboratorio DevOps con Vagrant y VirtualBox  
-_Creado como parte del reto [90 Días de DevOps con Roxs](https://github.com/roxsross/90diasdevops)_
+_Creado como parte del reto [90 Días de DevOps con Roxs](https://github.com/roxsross/90daysdevopsbyroxs)_
 
 ## 📦 Sobre este proyecto
 
