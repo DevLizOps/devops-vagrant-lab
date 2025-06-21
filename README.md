@@ -69,14 +69,14 @@ devops-vagrant-lab/
 ---
 ## 🚀 How to use
 
-1. **Clone the repository**
+### 1. **Clone the repository**
 
 ```bash
 git clone https://github.com/DevLizOps/devops-vagrant-lab.git
 cd devops-vagrant-lab/vm-en  # or vm-es for Spanish version
 ```
 
-2. **Start the virtual machine**
+### 2. **Start the virtual machine**
 
 ```bash
 vagrant up
@@ -92,7 +92,7 @@ This will:
 
 - Copy the static website into `/var/www/html/`.
 
-3. **View the static website**
+### 3. **View the static website**
 
 Open your browser and go to: http://192.168.56.6.
 
@@ -100,7 +100,7 @@ Open your browser and go to: http://192.168.56.6.
 
 ![demo](preview_website.png)
 
-4. **Access the virtual machine**
+### 4. **Access the virtual machine**
 
 If you want to explore the virtual machine or run manual commands, you can SSH into it:
 
@@ -205,14 +205,14 @@ devops-vagrant-lab/
 
 ## 🚀 Cómo usarlo
 
-1. **Clona el repositorio**
+### 1. **Clona el repositorio**
 
 ```bash
 git clone https://github.com/DevLizOps/devops-vagrant-lab.git
 cd devops-vagrant-lab/vm-es  # o vm-en para la versión en inglés
 ```
 
-2. **Inicia la máquina virtual**
+### 2. **Inicia la máquina virtual**
 
 ```bash
 vagrant up
@@ -228,13 +228,13 @@ Esto hará lo siguiente:
 
 - Copiar la página estática a `/var/www/html/`.
 
-3. **Visualiza la página estática**
+### 3. **Visualiza la página estática**
 
 Abre tu navegador y visita: http://192.168.56.7.
 
 > Esta IP está configurada en el `Vagrantfile` como una red privada.
 
-4. **Accede a la máquina virtual**
+### 4. **Accede a la máquina virtual**
 
 Si quieres explorar la máquina virtual o ejecutar comandos manualmente, puedes conectarte por SSH:
 
