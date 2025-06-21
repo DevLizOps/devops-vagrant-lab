@@ -35,6 +35,38 @@ Make sure you have the following installed on your machine:
 - [Vagrant](https://www.vagrantup.com/).
 
 ---
+
+## 🔧 Project structure
+
+```
+devops-vagrant-lab/
+├── vm-en/
+│   ├── Vagrantfile
+│   ├── static_website/
+│   │   ├── index.html
+│   │   └── styles.css
+│   └── scripts/
+│       ├── install_docker.sh
+│       └── install_nginx.sh
+├── vm-es/
+│   ├── Vagrantfile
+│   ├── static_website/
+│   │   ├── index.html
+│   │   └── styles.css
+│   └── scripts/
+│       ├── install_docker.sh
+│       └── install_nginx.sh
+```
+
+---
+
+### Provisioning scripts
+
+- `install_nginx.sh`: installs the Nginx web server and configures it to serve the static website by copying the files to `/var/www/html/`. This ensures your site is accessible when the VM is running.
+
+- `install_docker.sh`: installs Docker and kubectl. Docker will let you run containers inside the VM, and kubectl is the Kubernetes CLI tool, prepared here for future Kubernetes-related work or practice.
+
+---
 ## 🚀 How to use
 
 1. **Clone the repository**
@@ -60,34 +92,6 @@ This will:
 
 - Copy the static website into `/var/www/html/`.
 
-## 🔧 Project structure
-
-```
-devops-vagrant-lab/
-├── vm-en/
-│   ├── Vagrantfile
-│   ├── static_website/
-│   │   ├── index.html
-│   │   └── styles.css
-│   └── scripts/
-│       ├── install_docker.sh
-│       └── install_nginx.sh
-├── vm-es/
-│   ├── Vagrantfile
-│   ├── static_website/
-│   │   ├── index.html
-│   │   └── styles.css
-│   └── scripts/
-│       ├── install_docker.sh
-│       └── install_nginx.sh
-```
-
-### Provisioning scripts
-
-- `install_nginx.sh`: installs the Nginx web server and configures it to serve the static website by copying the files to `/var/www/html/`. This ensures your site is accessible when the VM is running.
-
-- `install_docker.sh`: installs Docker and kubectl. Docker will let you run containers inside the VM, and kubectl is the Kubernetes CLI tool, prepared here for future Kubernetes-related work or practice.
-
 3. **View the static website**
 
 Open your browser and go to: http://192.168.56.6.
@@ -95,6 +99,16 @@ Open your browser and go to: http://192.168.56.6.
 > This IP is configured in the `Vagrantfile` as a private network.
 
 ![demo](preview_website.png)
+
+4. **Access the virtual machine**
+
+If you want to explore the virtual machine or run manual commands, you can SSH into it:
+
+```bash
+vagrant ssh
+```
+
+Use this to verify installed tools, inspect logs, or continue experimenting inside the VM.
 
 ## 🧹 Shutting down and cleaning up
 
@@ -159,31 +173,6 @@ Asegúrate de tener lo siguiente instalado en tu equipo:
 
 ---
 
-## 🚀 Cómo usarlo
-
-1. **Clona el repositorio**
-
-```bash
-git clone https://github.com/DevLizOps/devops-vagrant-lab.git
-cd devops-vagrant-lab/vm-es  # o vm-en para la versión en inglés
-```
-
-2. **Inicia la máquina virtual**
-
-```bash
-vagrant up
-```
-
-Esto hará lo siguiente:
-
-- Descargar la imagen base de Ubuntu 22.04 (si es necesario).
-
-- Iniciar la máquina virtual.
-
-- Ejecutar los scripts de aprovisionamiento para instalar Nginx, Docker y kubectl.
-
-- Copiar la página estática a `/var/www/html/`.
-
 ## 🔧 Estructura del proyecto
 
 ```
@@ -212,11 +201,48 @@ devops-vagrant-lab/
 
 - `instalar_docker.sh`: instala Docker y kubectl. Docker permite ejecutar contenedores dentro de la VM, y kubectl es la herramienta de línea de comandos de Kubernetes, preparada aquí para futuros trabajos o prácticas con Kubernetes.
 
+---
+
+## 🚀 Cómo usarlo
+
+1. **Clona el repositorio**
+
+```bash
+git clone https://github.com/DevLizOps/devops-vagrant-lab.git
+cd devops-vagrant-lab/vm-es  # o vm-en para la versión en inglés
+```
+
+2. **Inicia la máquina virtual**
+
+```bash
+vagrant up
+```
+
+Esto hará lo siguiente:
+
+- Descargar la imagen base de Ubuntu 22.04 (si es necesario).
+
+- Iniciar la máquina virtual.
+
+- Ejecutar los scripts de aprovisionamiento para instalar Nginx, Docker y kubectl.
+
+- Copiar la página estática a `/var/www/html/`.
+
 3. **Visualiza la página estática**
 
 Abre tu navegador y visita: http://192.168.56.7.
 
 > Esta IP está configurada en el `Vagrantfile` como una red privada.
+
+4. **Accede a la máquina virtual**
+
+Si quieres explorar la máquina virtual o ejecutar comandos manualmente, puedes conectarte por SSH:
+
+```bash
+vagrant ssh
+```
+
+Esto te permitirá verificar herramientas instaladas, revisar logs o seguir haciendo pruebas dentro de la VM.
 
 ![demo](preview_website.png)
 
