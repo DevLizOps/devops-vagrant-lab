@@ -17,9 +17,6 @@ You can choose between:
 - `vm-es/`: Spanish version of the website.
 - `vm-en/`: English version of the website.
 
-
-![static websites](show.png)
-
 Everything is done using **shell provisioning scripts**, demonstrating basic Infrastructure as Code (IaC) principles.
 
 ---
@@ -65,6 +62,7 @@ This will:
 
 ## 🔧 Project structure
 
+```
 devops-vagrant-lab/
 ├── vm-en/
 │   ├── Vagrantfile
@@ -75,7 +73,14 @@ devops-vagrant-lab/
 │       ├── install_docker.sh
 │       └── install_nginx.sh
 ├── vm-es/
-│   └── ...
+│   ├── Vagrantfile
+│   ├── static_website/
+│   │   ├── index.html
+│   │   └── styles.css
+│   └── scripts/
+│       ├── install_docker.sh
+│       └── install_nginx.sh
+```
 
 ### Provisioning scripts
 
@@ -89,10 +94,17 @@ Open your browser and go to: http://192.168.56.6.
 
 > This IP is configured in the `Vagrantfile` as a private network.
 
+![demo](preview_website.png)
+
 ## 🧠 Key Learnings
 
 - Automating VM provisioning with Vagrant.
 - Using shell scripts to install Docker & kubectl.
+
+## 📄 License
+
+This project is licensed under the [MIT License](LICENSE).  
+Feel free to use, modify and share it as long as you keep the original license notice.
 
 > 🌱 Feel free to clone this project and customize the static site with your own DevOps journey.
 
@@ -116,8 +128,6 @@ Este proyecto utiliza **Vagrant** y **VirtualBox** para crear y aprovisionar una
 Puedes elegir entre:
 - `vm-es/`: versión en español del sitio web.
 - `vm-en/`: versión en inglés del sitio web.
-
-![webs estáticas](show.png)
 
 Todo se realiza mediante **scripts de aprovisionamiento en shell**, demostrando principios básicos de Infrastructure as Code (IaC).
 
@@ -163,8 +173,9 @@ Esto hará lo siguiente:
 
 - Copiar la página estática a `/var/www/html/`.
 
-## 🔧 Project structure
+## 🔧 Estructura del proyecto
 
+```
 devops-vagrant-lab/
 ├── vm-en/
 │   ├── Vagrantfile
@@ -175,7 +186,14 @@ devops-vagrant-lab/
 │       ├── install_docker.sh
 │       └── install_nginx.sh
 ├── vm-es/
-│   └── ...
+│   ├── Vagrantfile
+│   ├── static_website/
+│   │   ├── index.html
+│   │   └── styles.css
+│   └── scripts/
+│       ├── install_docker.sh
+│       └── install_nginx.sh
+```
 
 ### Scripts de aprovisionamiento
 
@@ -189,11 +207,18 @@ Abre tu navegador y visita: http://192.168.56.7.
 
 > Esta IP está configurada en el `Vagrantfile` como una red privada.
 
+![demo](preview_website.png)
+
 ## 🧠 Aprendizajes clave
 
 - Automatización del aprovisionamiento de máquinas virtuales con Vagrant.
 - Uso de scripts en shell para instalar Docker y kubectl.
 
 ---
+
+## 📄 Licencia
+
+Este proyecto está bajo la [Licencia MIT](LICENSE).  
+Puedes usarlo, modificarlo y compartirlo libremente siempre que conserves el aviso original de la licencia.
 
 > 🌱 Siéntete libre de clonar este proyecto y personalizar el sitio estático con tu propia historia DevOps.
