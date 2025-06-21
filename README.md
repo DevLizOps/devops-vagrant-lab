@@ -96,6 +96,17 @@ Open your browser and go to: http://192.168.56.6.
 
 ![demo](preview_website.png)
 
+## 🧹 Shutting down and cleaning up
+
+Once you're done testing the project, you can stop and remove the virtual machine:
+
+```bash
+vagrant halt    # Gracefully shuts down the VM
+vagrant destroy # Destroys the VM and deletes all resources
+```
+
+This helps free up disk space and keeps your system clean.
+
 ## 🧠 Key Learnings
 
 - Automating VM provisioning with Vagrant.
@@ -208,6 +219,17 @@ Abre tu navegador y visita: http://192.168.56.7.
 > Esta IP está configurada en el `Vagrantfile` como una red privada.
 
 ![demo](preview_website.png)
+
+## 🧹 Apagar y limpiar
+
+Una vez hayas terminado de probar el proyecto, puedes detener y eliminar la máquina virtual:
+
+```bash
+vagrant halt    # Gracefully shuts down the VM
+vagrant destroy # Destroys the VM and deletes all resources
+```
+
+Esto ayuda a liberar espacio en disco y mantener tu sistema limpio.
 
 ## 🧠 Aprendizajes clave
 
